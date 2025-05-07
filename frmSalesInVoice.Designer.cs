@@ -73,7 +73,7 @@
             lblInvoiceNo.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.World);
             lblInvoiceNo.Location = new Point(8, 16);
             lblInvoiceNo.Name = "lblInvoiceNo";
-            lblInvoiceNo.Size = new Size(74, 19);
+            lblInvoiceNo.Size = new Size(80, 20);
             lblInvoiceNo.TabIndex = 0;
             lblInvoiceNo.Text = "Invoice No";
             // 
@@ -91,7 +91,7 @@
             lblInvoiceDate.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.World);
             lblInvoiceDate.Location = new Point(325, 16);
             lblInvoiceDate.Name = "lblInvoiceDate";
-            lblInvoiceDate.Size = new Size(85, 19);
+            lblInvoiceDate.Size = new Size(92, 20);
             lblInvoiceDate.TabIndex = 2;
             lblInvoiceDate.Text = "Invoice Date";
             // 
@@ -109,7 +109,7 @@
             lblCustomer.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.World);
             lblCustomer.Location = new Point(8, 61);
             lblCustomer.Name = "lblCustomer";
-            lblCustomer.Size = new Size(69, 19);
+            lblCustomer.Size = new Size(72, 20);
             lblCustomer.TabIndex = 4;
             lblCustomer.Text = "Customer";
             // 
@@ -121,6 +121,7 @@
             cbxCustomer.Name = "cbxCustomer";
             cbxCustomer.Size = new Size(300, 27);
             cbxCustomer.TabIndex = 5;
+            cbxCustomer.SelectedIndexChanged += cbxCustomer_SelectedIndexChanged;
             // 
             // panel1
             // 
@@ -181,7 +182,7 @@
             lblAmount.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.World);
             lblAmount.Location = new Point(615, 95);
             lblAmount.Name = "lblAmount";
-            lblAmount.Size = new Size(59, 19);
+            lblAmount.Size = new Size(62, 20);
             lblAmount.TabIndex = 12;
             lblAmount.Text = "Amount";
             // 
@@ -199,7 +200,7 @@
             lblQty.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.World);
             lblQty.Location = new Point(485, 95);
             lblQty.Name = "lblQty";
-            lblQty.Size = new Size(32, 19);
+            lblQty.Size = new Size(32, 20);
             lblQty.TabIndex = 10;
             lblQty.Text = "Qty";
             // 
@@ -217,7 +218,7 @@
             lblRate.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.World);
             lblRate.Location = new Point(325, 95);
             lblRate.Name = "lblRate";
-            lblRate.Size = new Size(36, 19);
+            lblRate.Size = new Size(39, 20);
             lblRate.TabIndex = 8;
             lblRate.Text = "Rate";
             // 
@@ -236,7 +237,7 @@
             lblProduct.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.World);
             lblProduct.Location = new Point(8, 95);
             lblProduct.Name = "lblProduct";
-            lblProduct.Size = new Size(57, 19);
+            lblProduct.Size = new Size(60, 20);
             lblProduct.TabIndex = 6;
             lblProduct.Text = "Product";
             // 
@@ -279,6 +280,7 @@
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(901, 262);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellMouseDoubleClick += dataGridView1_CellMouseDoubleClick;
@@ -286,36 +288,44 @@
             // Id
             // 
             Id.HeaderText = "Id";
+            Id.MinimumWidth = 6;
             Id.Name = "Id";
             Id.Visible = false;
+            Id.Width = 125;
             // 
             // ProductId
             // 
             ProductId.HeaderText = "ProductId";
+            ProductId.MinimumWidth = 6;
             ProductId.Name = "ProductId";
             ProductId.Visible = false;
+            ProductId.Width = 125;
             // 
             // Product
             // 
             Product.HeaderText = "Product";
+            Product.MinimumWidth = 6;
             Product.Name = "Product";
             Product.Width = 405;
             // 
             // Rate
             // 
             Rate.HeaderText = "Rate";
+            Rate.MinimumWidth = 6;
             Rate.Name = "Rate";
             Rate.Width = 150;
             // 
             // Qty
             // 
             Qty.HeaderText = "Qty";
+            Qty.MinimumWidth = 6;
             Qty.Name = "Qty";
             Qty.Width = 150;
             // 
             // Amount
             // 
             Amount.HeaderText = "Amount";
+            Amount.MinimumWidth = 6;
             Amount.Name = "Amount";
             Amount.Width = 150;
             // 
@@ -329,13 +339,14 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(907, 110);
             panel3.TabIndex = 8;
+            panel3.Paint += panel3_Paint;
             // 
             // lblTotalDisplay
             // 
             lblTotalDisplay.AutoSize = true;
             lblTotalDisplay.Location = new Point(825, 11);
             lblTotalDisplay.Name = "lblTotalDisplay";
-            lblTotalDisplay.Size = new Size(0, 15);
+            lblTotalDisplay.Size = new Size(0, 17);
             lblTotalDisplay.TabIndex = 3;
             // 
             // lblTotal
@@ -343,7 +354,7 @@
             lblTotal.AutoSize = true;
             lblTotal.Location = new Point(708, 11);
             lblTotal.Name = "lblTotal";
-            lblTotal.Size = new Size(32, 15);
+            lblTotal.Size = new Size(36, 17);
             lblTotal.TabIndex = 2;
             lblTotal.Text = "Total";
             // 

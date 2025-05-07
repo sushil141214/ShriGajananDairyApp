@@ -60,7 +60,7 @@ namespace ShriGajananDairy
                 MessageBox.Show("Try again later");
                 return;
             }
-            
+
         }
 
         private void LoadCustomerDropdown()
@@ -78,8 +78,8 @@ namespace ShriGajananDairy
                     if (dt.Rows.Count > 0)
                     {
                         cbxCustomer.DataSource = dt;
-                        cbxCustomer.DisplayMember = "CustomerName"; 
-                        cbxCustomer.ValueMember = "Id"; 
+                        cbxCustomer.DisplayMember = "CustomerName";
+                        cbxCustomer.ValueMember = "Id";
                         cbxCustomer.SelectedIndex = -1;
                         cbxCustomer.SelectedText = "Select Customer";
                     }
@@ -120,7 +120,7 @@ namespace ShriGajananDairy
                 return;
             }
 
-            
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -172,7 +172,7 @@ namespace ShriGajananDairy
             {
                 MessageBox.Show("Try again later");
                 return;
-            }   
+            }
         }
 
         private void CalculateAmount(object sender, EventArgs e)
@@ -213,7 +213,7 @@ namespace ShriGajananDairy
             {
                 MessageBox.Show("Try again later");
                 return;
-            }            
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -251,7 +251,7 @@ namespace ShriGajananDairy
                                     using (SqlCommand cmd = new SqlCommand("sp_InsertUpdateSALEPURCHASETRANSACTION", conn))
                                     {
                                         cmd.CommandType = CommandType.StoredProcedure;
-                                                                               
+
                                         cmd.Parameters.AddWithValue("@Id", Convert.ToInt32(row.Cells["Id"].Value));
                                         cmd.Parameters.AddWithValue("@InvoiceNo", txtInvoiceNo.Text);
                                         cmd.Parameters.AddWithValue("@InvoiceDate", txtInvoiceDate.Text);
@@ -281,7 +281,7 @@ namespace ShriGajananDairy
                     this.Close();  // Close the current form
                 }
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show("Try again later");
                 return;
@@ -292,12 +292,12 @@ namespace ShriGajananDairy
         {
             bool isvalid = true;
 
-            if (cbxCustomer.SelectedIndex == -1) 
+            if (cbxCustomer.SelectedIndex == -1)
             {
                 MessageBox.Show("select Customer");
-                isvalid = false; 
+                isvalid = false;
             }
-            if (dataGridView1.RowCount  == 0)
+            if (dataGridView1.RowCount == 0)
             {
                 MessageBox.Show("Add product");
                 isvalid = false;
@@ -306,5 +306,14 @@ namespace ShriGajananDairy
             return isvalid;
         }
 
+        private void cbxCustomer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

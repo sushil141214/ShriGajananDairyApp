@@ -108,5 +108,12 @@ namespace ShriGajananDairy
             frmHelp Help = new frmHelp();
             Help.Show();
         }
+
+        private void bulkSalesInvoiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BulkSalesInvoice BSI = new BulkSalesInvoice();
+            BSI.Show();
+
+        }
     }
 }

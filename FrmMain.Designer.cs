@@ -44,6 +44,7 @@
             salesReportToolStripMenuItem = new ToolStripMenuItem();
             purchaseReportToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
+            bulkSalesInvoiceToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -89,7 +90,7 @@
             // 
             // saToolStripMenuItem
             // 
-            saToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { salesInvoiceToolStripMenuItem, salesMemoToolStripMenuItem, purchaseToolStripMenuItem });
+            saToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { salesInvoiceToolStripMenuItem, salesMemoToolStripMenuItem, purchaseToolStripMenuItem, bulkSalesInvoiceToolStripMenuItem });
             saToolStripMenuItem.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             saToolStripMenuItem.Name = "saToolStripMenuItem";
             saToolStripMenuItem.Size = new Size(164, 41);
@@ -98,21 +99,21 @@
             // salesInvoiceToolStripMenuItem
             // 
             salesInvoiceToolStripMenuItem.Name = "salesInvoiceToolStripMenuItem";
-            salesInvoiceToolStripMenuItem.Size = new Size(323, 42);
+            salesInvoiceToolStripMenuItem.Size = new Size(336, 42);
             salesInvoiceToolStripMenuItem.Text = "Sales Invoice";
             salesInvoiceToolStripMenuItem.Click += salesInvoiceToolStripMenuItem_Click;
             // 
             // salesMemoToolStripMenuItem
             // 
             salesMemoToolStripMenuItem.Name = "salesMemoToolStripMenuItem";
-            salesMemoToolStripMenuItem.Size = new Size(323, 42);
+            salesMemoToolStripMenuItem.Size = new Size(336, 42);
             salesMemoToolStripMenuItem.Text = "Sales Memo";
             salesMemoToolStripMenuItem.Click += salesMemoToolStripMenuItem_Click;
             // 
             // purchaseToolStripMenuItem
             // 
             purchaseToolStripMenuItem.Name = "purchaseToolStripMenuItem";
-            purchaseToolStripMenuItem.Size = new Size(323, 42);
+            purchaseToolStripMenuItem.Size = new Size(336, 42);
             purchaseToolStripMenuItem.Text = "Purchase Invoice";
             purchaseToolStripMenuItem.Click += purchaseToolStripMenuItem_Click;
             // 
@@ -167,6 +168,13 @@
             helpToolStripMenuItem.Text = "Help";
             helpToolStripMenuItem.Click += helpToolStripMenuItem_Click;
             // 
+            // bulkSalesInvoiceToolStripMenuItem
+            // 
+            bulkSalesInvoiceToolStripMenuItem.Name = "bulkSalesInvoiceToolStripMenuItem";
+            bulkSalesInvoiceToolStripMenuItem.Size = new Size(336, 42);
+            bulkSalesInvoiceToolStripMenuItem.Text = "Bulk Sales Invoice";
+            bulkSalesInvoiceToolStripMenuItem.Click += bulkSalesInvoiceToolStripMenuItem_Click;
+            // 
             // FrmMain
             // 
             AutoScaleDimensions = new SizeF(16F, 37F);
@@ -203,5 +211,6 @@
         private ToolStripMenuItem salesReportToolStripMenuItem;
         private ToolStripMenuItem purchaseReportToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem bulkSalesInvoiceToolStripMenuItem;
     }
 }
